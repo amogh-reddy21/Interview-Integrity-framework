@@ -1,0 +1,189 @@
+{
+  "fixture": {
+    "id": 5,
+    "name": "instant_recall_answer",
+    "why": "One answer came back instantly. Must stay silent -- a prepared answer is not a dishonest one.",
+    "spec_expectation": "silence"
+  },
+  "expected": {
+    "contradictions": []
+  },
+  "expected_note": "Originally a timing fixture. Timing analysis was removed; this transcript is retained as a negative control for contradiction detection. Nothing in it is self-inconsistent, so the expected output is an empty list.",
+  "raw": {
+    "interview_id": "fx-05",
+    "candidate_id": "fx-05-cand",
+    "source": "fixture",
+    "turns": [
+      {
+        "turn_id": "q1",
+        "speaker": "agent",
+        "role": "question",
+        "text": "What was the p99 latency on that service before you started?",
+        "question_bucket": "factual",
+        "start_ts": 0.0,
+        "end_ts": 5.7
+      },
+      {
+        "turn_id": "a1",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "It was around eight hundred milliseconds, and we got it to about two twenty.",
+        "start_ts": 8.3,
+        "end_ts": 15.34
+      },
+      {
+        "turn_id": "q2",
+        "speaker": "agent",
+        "role": "question",
+        "text": "How many requests per second were you handling at peak?",
+        "question_bucket": "factual",
+        "start_ts": 16.24,
+        "end_ts": 21.71
+      },
+      {
+        "turn_id": "a2",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "Peak was roughly four thousand a second, on Black Friday it was closer to seven.",
+        "start_ts": 24.81,
+        "end_ts": 32.01
+      },
+      {
+        "turn_id": "q3",
+        "speaker": "agent",
+        "role": "question",
+        "text": "What was the error budget you were working against?",
+        "question_bucket": "factual",
+        "start_ts": 32.91,
+        "end_ts": 38.2
+      },
+      {
+        "turn_id": "a3",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "Ninety-nine point nine monthly, so about forty-three minutes.",
+        "start_ts": 40.6,
+        "end_ts": 47.04
+      },
+      {
+        "turn_id": "q4",
+        "speaker": "agent",
+        "role": "question",
+        "text": "What is the difference between optimistic and pessimistic locking?",
+        "question_bucket": "factual",
+        "start_ts": 47.94,
+        "end_ts": 53.91
+      },
+      {
+        "turn_id": "a4",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "Optimistic locking assumes conflicts are rare, so you let the write proceed and check a version number at commit time, and if it changed you retry. Pessimistic locking takes the lock up front and makes everyone else wait, which is safer under contention but costs you throughput and risks deadlocks.",
+        "start_ts": 54.06,
+        "end_ts": 70.02
+      },
+      {
+        "turn_id": "q5",
+        "speaker": "agent",
+        "role": "question",
+        "text": "What was the retention window on the event stream?",
+        "question_bucket": "factual",
+        "start_ts": 70.92,
+        "end_ts": 76.17
+      },
+      {
+        "turn_id": "a5",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "Seven days in Kafka, then it landed in S3 and stayed there indefinitely.",
+        "start_ts": 79.07,
+        "end_ts": 85.95
+      },
+      {
+        "turn_id": "q6",
+        "speaker": "agent",
+        "role": "question",
+        "text": "Tell me about the hardest bug you found in that system.",
+        "question_bucket": "experiential",
+        "start_ts": 86.85,
+        "end_ts": 92.32
+      },
+      {
+        "turn_id": "a6",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "A race in the deduplication logic that only showed up when two consumers rebalanced at the same time. It took three weeks and a lot of logging.",
+        "start_ts": 94.12,
+        "end_ts": 103.84
+      },
+      {
+        "turn_id": "q7",
+        "speaker": "agent",
+        "role": "question",
+        "text": "Describe how you worked with the SRE team.",
+        "question_bucket": "experiential",
+        "start_ts": 104.74,
+        "end_ts": 109.63
+      },
+      {
+        "turn_id": "a7",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "We shared the on-call rotation, so they were in our incident reviews and we were in theirs.",
+        "start_ts": 111.73,
+        "end_ts": 119.37
+      },
+      {
+        "turn_id": "q8",
+        "speaker": "agent",
+        "role": "question",
+        "text": "Tell me about a time you pushed back on a deadline.",
+        "question_bucket": "experiential",
+        "start_ts": 120.27,
+        "end_ts": 125.56
+      },
+      {
+        "turn_id": "a8",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "We were asked to ship the migration before the holiday freeze. I laid out what we would skip and we moved it to January.",
+        "start_ts": 127.46,
+        "end_ts": 136.26
+      },
+      {
+        "turn_id": "q9",
+        "speaker": "agent",
+        "role": "question",
+        "text": "How do you approach performance work in general?",
+        "question_bucket": "open_ended",
+        "start_ts": 137.16,
+        "end_ts": 142.32
+      },
+      {
+        "turn_id": "a9",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "Measure first, and be suspicious of the thing everyone already believes is slow. It is usually somewhere boring.",
+        "start_ts": 145.72,
+        "end_ts": 154.2
+      },
+      {
+        "turn_id": "q10",
+        "speaker": "agent",
+        "role": "question",
+        "text": "What would you want to know about our stack before joining?",
+        "question_bucket": "open_ended",
+        "start_ts": 155.1,
+        "end_ts": 160.75
+      },
+      {
+        "turn_id": "a10",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "Mostly how you handle schema changes, because that is where I have seen the most pain.",
+        "start_ts": 163.75,
+        "end_ts": 171.19
+      }
+    ]
+  }
+}

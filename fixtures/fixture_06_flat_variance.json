@@ -1,0 +1,189 @@
+{
+  "fixture": {
+    "id": 6,
+    "name": "flat_variance",
+    "why": "Unusually even pacing throughout. Must stay silent.",
+    "spec_expectation": "silence"
+  },
+  "expected": {
+    "contradictions": []
+  },
+  "expected_note": "Originally a timing fixture. Timing analysis was removed; this transcript is retained as a negative control for contradiction detection. Nothing in it is self-inconsistent, so the expected output is an empty list.",
+  "raw": {
+    "interview_id": "fx-06",
+    "candidate_id": "fx-06-cand",
+    "source": "fixture",
+    "turns": [
+      {
+        "turn_id": "q1",
+        "speaker": "agent",
+        "role": "question",
+        "text": "What was your team's deployment frequency?",
+        "question_bucket": "factual",
+        "start_ts": 0.0,
+        "end_ts": 4.89
+      },
+      {
+        "turn_id": "a1",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "We deployed about twice a day, on demand rather than on a schedule.",
+        "start_ts": 6.87,
+        "end_ts": 13.55
+      },
+      {
+        "turn_id": "q2",
+        "speaker": "agent",
+        "role": "question",
+        "text": "Which CI system were you using?",
+        "question_bucket": "factual",
+        "start_ts": 14.45,
+        "end_ts": 18.84
+      },
+      {
+        "turn_id": "a2",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "GitHub Actions, with a self-hosted runner pool for the heavier jobs.",
+        "start_ts": 20.85,
+        "end_ts": 27.57
+      },
+      {
+        "turn_id": "q3",
+        "speaker": "agent",
+        "role": "question",
+        "text": "What was the test coverage on that repo?",
+        "question_bucket": "factual",
+        "start_ts": 28.47,
+        "end_ts": 33.27
+      },
+      {
+        "turn_id": "a3",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "Around seventy percent on lines, higher on the core modules.",
+        "start_ts": 35.27,
+        "end_ts": 41.67
+      },
+      {
+        "turn_id": "q4",
+        "speaker": "agent",
+        "role": "question",
+        "text": "How many services were in production?",
+        "question_bucket": "factual",
+        "start_ts": 42.57,
+        "end_ts": 47.24
+      },
+      {
+        "turn_id": "a4",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "Twenty-three, though about six of them were doing almost nothing.",
+        "start_ts": 49.27,
+        "end_ts": 55.87
+      },
+      {
+        "turn_id": "q5",
+        "speaker": "agent",
+        "role": "question",
+        "text": "Tell me about a project that did not go well.",
+        "question_bucket": "experiential",
+        "start_ts": 56.77,
+        "end_ts": 61.8
+      },
+      {
+        "turn_id": "a5",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "The search rewrite. We underestimated the relevance work and shipped something that was faster and worse, and we ended up reverting most of it.",
+        "start_ts": 63.79,
+        "end_ts": 73.51
+      },
+      {
+        "turn_id": "q6",
+        "speaker": "agent",
+        "role": "question",
+        "text": "Describe a time you mentored someone.",
+        "question_bucket": "experiential",
+        "start_ts": 74.41,
+        "end_ts": 79.08
+      },
+      {
+        "turn_id": "a6",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "I onboarded two junior engineers last year, mostly by pairing with them on real tickets rather than giving them starter tasks.",
+        "start_ts": 81.1,
+        "end_ts": 90.14
+      },
+      {
+        "turn_id": "q7",
+        "speaker": "agent",
+        "role": "question",
+        "text": "Tell me about a technical decision you would make differently now.",
+        "question_bucket": "experiential",
+        "start_ts": 91.04,
+        "end_ts": 97.01
+      },
+      {
+        "turn_id": "a7",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "Choosing a document store for data that turned out to be deeply relational. We spent a year working around it.",
+        "start_ts": 99.01,
+        "end_ts": 107.41
+      },
+      {
+        "turn_id": "q8",
+        "speaker": "agent",
+        "role": "question",
+        "text": "How do you keep up with changes in the field?",
+        "question_bucket": "open_ended",
+        "start_ts": 108.31,
+        "end_ts": 113.34
+      },
+      {
+        "turn_id": "a8",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "Badly and on purpose. I read post-mortems and source code rather than news.",
+        "start_ts": 115.31,
+        "end_ts": 122.31
+      },
+      {
+        "turn_id": "q9",
+        "speaker": "agent",
+        "role": "question",
+        "text": "What do you look for in a code review?",
+        "question_bucket": "open_ended",
+        "start_ts": 123.21,
+        "end_ts": 127.92
+      },
+      {
+        "turn_id": "a9",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "Whether I can tell what the change is trying to do without asking. Style comes second.",
+        "start_ts": 129.93,
+        "end_ts": 137.37
+      },
+      {
+        "turn_id": "q10",
+        "speaker": "agent",
+        "role": "question",
+        "text": "What are you looking for in your next role?",
+        "question_bucket": "open_ended",
+        "start_ts": 138.27,
+        "end_ts": 143.2
+      },
+      {
+        "turn_id": "a10",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "A team where the hard problem is the product rather than the deploy pipeline.",
+        "start_ts": 145.2,
+        "end_ts": 152.28
+      }
+    ]
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "fixture": {
+    "id": 1,
+    "name": "single_slow_answer",
+    "why": "One answer took far longer than the rest. Timing is no longer measured, so this is a transcript with nothing to say and must stay silent.",
+    "spec_expectation": "silence"
+  },
+  "expected": {
+    "contradictions": []
+  },
+  "expected_note": "Originally a timing fixture. Timing analysis was removed; this transcript is retained as a negative control for contradiction detection. Nothing in it is self-inconsistent, so the expected output is an empty list.",
+  "raw": {
+    "interview_id": "fx-01",
+    "candidate_id": "fx-01-cand",
+    "source": "fixture",
+    "turns": [
+      {
+        "turn_id": "q1",
+        "speaker": "agent",
+        "role": "question",
+        "text": "Which version of Postgres were you running on that project?",
+        "question_bucket": "factual",
+        "start_ts": 0.0,
+        "end_ts": 5.65
+      },
+      {
+        "turn_id": "a1",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "It was 13, we upgraded from 11 about six months before I left.",
+        "start_ts": 6.85,
+        "end_ts": 13.33
+      },
+      {
+        "turn_id": "q2",
+        "speaker": "agent",
+        "role": "question",
+        "text": "Walk me through how you approached the data pipeline rewrite.",
+        "question_bucket": "experiential",
+        "start_ts": 14.23,
+        "end_ts": 19.98
+      },
+      {
+        "turn_id": "a2",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "We started by instrumenting the existing DAGs so we could see where time was actually going. Turned out two thirds of the runtime was one join that nobody had looked at in two years.",
+        "start_ts": 20.98,
+        "end_ts": 32.26
+      },
+      {
+        "turn_id": "q3",
+        "speaker": "agent",
+        "role": "question",
+        "text": "Tell me about a disagreement you had with a teammate on a technical decision.",
+        "question_bucket": "experiential",
+        "start_ts": 33.16,
+        "end_ts": 39.62
+      },
+      {
+        "turn_id": "a3",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "I wanted to keep everything in Airflow and a colleague wanted to move to Dagster. We wrote up both options, I was wrong about the migration cost, and we went with Dagster.",
+        "start_ts": 40.92,
+        "end_ts": 51.76
+      },
+      {
+        "turn_id": "q4",
+        "speaker": "agent",
+        "role": "question",
+        "text": "Tell me about a time you had to debug something in production under time pressure.",
+        "question_bucket": "experiential",
+        "start_ts": 52.66,
+        "end_ts": 59.35
+      },
+      {
+        "turn_id": "a4",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "So there was an incident where the nightly load failed silently for three days. I noticed the dashboards were flat, traced it to a schema change upstream, and backfilled overnight.",
+        "start_ts": 67.55,
+        "end_ts": 78.75
+      },
+      {
+        "turn_id": "q5",
+        "speaker": "agent",
+        "role": "question",
+        "text": "What was the size of the dataset you were working with?",
+        "question_bucket": "factual",
+        "start_ts": 79.65,
+        "end_ts": 85.12
+      },
+      {
+        "turn_id": "a5",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "Around four terabytes in the warehouse, growing maybe eighty gigs a week.",
+        "start_ts": 86.02,
+        "end_ts": 92.94
+      },
+      {
+        "turn_id": "q6",
+        "speaker": "agent",
+        "role": "question",
+        "text": "Describe a project where the requirements changed partway through.",
+        "question_bucket": "experiential",
+        "start_ts": 93.84,
+        "end_ts": 99.81
+      },
+      {
+        "turn_id": "a6",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "The attribution model. Halfway in, marketing decided they wanted per-channel breakdowns, which meant we needed session stitching we had not planned for. We cut the forecasting piece to make room.",
+        "start_ts": 100.91,
+        "end_ts": 112.71
+      },
+      {
+        "turn_id": "q7",
+        "speaker": "agent",
+        "role": "question",
+        "text": "How do you think about the trade-off between shipping fast and building something maintainable?",
+        "question_bucket": "open_ended",
+        "start_ts": 113.61,
+        "end_ts": 120.88
+      },
+      {
+        "turn_id": "a7",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "I try to make the cost visible rather than pick a side. If we are taking a shortcut I want it written down with the conditions that would make us go back and fix it.",
+        "start_ts": 122.28,
+        "end_ts": 132.88
+      },
+      {
+        "turn_id": "q8",
+        "speaker": "agent",
+        "role": "question",
+        "text": "Tell me about a time you had to explain something technical to a non-technical stakeholder.",
+        "question_bucket": "experiential",
+        "start_ts": 133.78,
+        "end_ts": 140.87
+      },
+      {
+        "turn_id": "a8",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "I had to explain to our head of sales why the lead scores changed. I stopped using the word model and just showed two example accounts and what moved them.",
+        "start_ts": 142.07,
+        "end_ts": 152.27
+      },
+      {
+        "turn_id": "q9",
+        "speaker": "agent",
+        "role": "question",
+        "text": "What orchestration tool were you using day to day?",
+        "question_bucket": "factual",
+        "start_ts": 153.17,
+        "end_ts": 158.42
+      },
+      {
+        "turn_id": "a9",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "Airflow for the first two years, then Dagster after the migration.",
+        "start_ts": 159.42,
+        "end_ts": 166.06
+      },
+      {
+        "turn_id": "q10",
+        "speaker": "agent",
+        "role": "question",
+        "text": "What kind of problems do you want to be working on next?",
+        "question_bucket": "open_ended",
+        "start_ts": 166.96,
+        "end_ts": 172.48
+      },
+      {
+        "turn_id": "a10",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "I want to be closer to the modelling side. The last two years were mostly plumbing and I liked it, but I miss the analysis.",
+        "start_ts": 173.98,
+        "end_ts": 182.9
+      }
+    ]
+  }
+}

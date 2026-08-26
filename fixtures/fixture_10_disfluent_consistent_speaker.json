@@ -1,0 +1,173 @@
+{
+  "fixture": {
+    "id": 10,
+    "name": "disfluent_consistent_speaker",
+    "why": "A disfluent, non-native speaker who restarts sentences and repeats himself, but whose account is consistent and substantive throughout. The fixture that proves neither detector grades fluency.",
+    "spec_expectation": "Zero",
+    "candidate_note": "Non-native speaker, heavy disfluency, factually consistent."
+  },
+  "expected": {
+    "contradictions": []
+  },
+  "expected_note": "Latencies are 6.4-9.1s throughout, consistently slow with a coefficient of variation around 0.11 -- no within-person discontinuity and no flat-variance note. On content: three people including a part-timer, nine to ten months, two months of bad data, all consistent. Restarts and repetitions are disfluency, not contradiction, and the plan excludes generic-answer and prose-density judgements entirely.",
+  "raw": {
+    "interview_id": "fx-10",
+    "candidate_id": "fx-10-cand",
+    "source": "fixture",
+    "turns": [
+      {
+        "turn_id": "q1",
+        "speaker": "agent",
+        "role": "question",
+        "text": "What was your role there?",
+        "question_bucket": "factual",
+        "start_ts": 0.0,
+        "end_ts": 4.12
+      },
+      {
+        "turn_id": "a1",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "I was, ah, backend engineer. Backend, mostly backend, sometimes also the database things.",
+        "start_ts": 10.52,
+        "end_ts": 18.08
+      },
+      {
+        "turn_id": "q2",
+        "speaker": "agent",
+        "role": "question",
+        "text": "Tell me about a project you worked on.",
+        "question_bucket": "experiential",
+        "start_ts": 18.98,
+        "end_ts": 23.69
+      },
+      {
+        "turn_id": "a2",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "So, the, we have this system for the invoices. Invoices from the suppliers, maybe forty thousand in a month, and before it was people typing them by hand. I build the, the parser for this, with a queue, so when it cannot read one it goes to a person instead of failing.",
+        "start_ts": 31.89,
+        "end_ts": 46.65
+      },
+      {
+        "turn_id": "q3",
+        "speaker": "agent",
+        "role": "question",
+        "text": "How many people were on that?",
+        "question_bucket": "factual",
+        "start_ts": 47.55,
+        "end_ts": 51.85
+      },
+      {
+        "turn_id": "a3",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "Three. Me and two, ah, two others. One was part time so maybe two and a half.",
+        "start_ts": 58.95,
+        "end_ts": 66.03
+      },
+      {
+        "turn_id": "q4",
+        "speaker": "agent",
+        "role": "question",
+        "text": "What went wrong on it?",
+        "question_bucket": "experiential",
+        "start_ts": 66.93,
+        "end_ts": 70.92
+      },
+      {
+        "turn_id": "a4",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "The, ah, the character encoding. Suppliers from different countries send different, different formats, and we did not think about this at the beginning, so for two months we have wrong data and nobody see it.",
+        "start_ts": 78.32,
+        "end_ts": 90.64
+      },
+      {
+        "turn_id": "q5",
+        "speaker": "agent",
+        "role": "question",
+        "text": "How did you find that?",
+        "question_bucket": "factual",
+        "start_ts": 91.54,
+        "end_ts": 95.53
+      },
+      {
+        "turn_id": "a5",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "A person in finance, she notice the totals are not matching. Not the monitoring, a person.",
+        "start_ts": 102.33,
+        "end_ts": 109.93
+      },
+      {
+        "turn_id": "q6",
+        "speaker": "agent",
+        "role": "question",
+        "text": "How did you fix it?",
+        "question_bucket": "experiential",
+        "start_ts": 110.83,
+        "end_ts": 114.68
+      },
+      {
+        "turn_id": "a6",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "We, first we detect the encoding instead of assuming, and then, the harder part, we go back and, ah, reprocess everything from before. Two months of invoices, we run it again in the night.",
+        "start_ts": 123.48,
+        "end_ts": 135.0
+      },
+      {
+        "turn_id": "q7",
+        "speaker": "agent",
+        "role": "question",
+        "text": "How long did the whole project take?",
+        "question_bucket": "factual",
+        "start_ts": 135.9,
+        "end_ts": 140.52
+      },
+      {
+        "turn_id": "a7",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "Nine months, about. Nine, maybe ten with the fixing.",
+        "start_ts": 148.12,
+        "end_ts": 154.2
+      },
+      {
+        "turn_id": "q8",
+        "speaker": "agent",
+        "role": "question",
+        "text": "What did you learn from it?",
+        "question_bucket": "open_ended",
+        "start_ts": 155.1,
+        "end_ts": 159.31
+      },
+      {
+        "turn_id": "a8",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "That the, the assumption you do not write down is the one that breaks you. We assume all invoices are one encoding and nobody ever say this out loud.",
+        "start_ts": 168.41,
+        "end_ts": 178.37
+      },
+      {
+        "turn_id": "q9",
+        "speaker": "agent",
+        "role": "question",
+        "text": "What are you looking for next?",
+        "question_bucket": "open_ended",
+        "start_ts": 179.27,
+        "end_ts": 183.62
+      },
+      {
+        "turn_id": "a9",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "Bigger system, and, ah, a team where I can ask more questions. My English is better when I ask questions.",
+        "start_ts": 191.92,
+        "end_ts": 200.12
+      }
+    ]
+  }
+}

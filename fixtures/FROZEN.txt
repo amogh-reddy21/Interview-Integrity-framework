@@ -1,0 +1,21 @@
+# Fixture freeze manifest
+# Written 2026-08-21, before any detector code existed.
+# Re-frozen 2026-08-24: response-latency analysis was removed from the
+#   system, so the timing keys were stripped from every fixture's expected
+#   block and fixtures 1-6 were re-described as negative controls for
+#   contradiction detection. No transcript text ('raw') was altered -- the
+#   inputs are the same interviews they always were.
+# If a fixture fails, fix the detector. Changing a fixture deletes the check.
+# tests/test_contract_frozen.py compares against these hashes.
+
+8310ba2753c5f1dc6dc42b5201734700437d5787ce3e894d894a0614588c5b49  fixture_01_single_slow_answer.json
+b1468efe28a20d19dc978b2a28a25ec155835ad37ba912d11d385d0912f219ae  fixture_02_uniformly_slow_speaker.json
+7e44a2375972108d28226909d69c38dfe50af6e5e72c344fc5a891aecd67a630  fixture_03_slow_only_on_open_ended.json
+0e6681dfd0a39b945a6f9a55adcd5fa387851ce7691868a12dbfbb34f1216598  fixture_04_thin_baseline_four_turns.json
+682a702c5dcb6d19280b387623134e53d8446030a699bd04109b7b8f3ee443b9  fixture_05_instant_recall_answer.json
+b973bbe41f9b124dc73850f28c76c2d96e37ebb488a8ae007774565e932e4039  fixture_06_flat_variance.json
+5da29102c8d45ed18bb0dc6b5bb0f76dbd88960bcfa82f7f20a22e731534132a  fixture_07_planted_team_size_contradiction.json
+6ff199fa939b5c8a958afe2a3bcb7910c8393571103d6eb575588141f9b3393f  fixture_08_self_correction.json
+c999c92e00ad47475a2230259deb0ce9db9bc05375aa6f11cb681ce02c1ae25e  fixture_09_same_fact_rephrased.json
+e031545cc0d2c8e303aac24049cdfebcba52fa59b26947d8fd572509f111a645  fixture_10_disfluent_consistent_speaker.json
+94b3cb33565873cdc472000c70f621df473b5056845b3da4df0ab664c6b3b2d4  fixture_11_clean_strong_interview.json

@@ -1,0 +1,2 @@
+# Phase 3 only. Phases 1 and 2 are standard library.
+anthropic>=1.0.0

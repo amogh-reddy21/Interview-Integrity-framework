@@ -1,0 +1,87 @@
+{
+  "fixture": {
+    "id": 4,
+    "name": "thin_baseline_four_turns",
+    "why": "A four-turn interview. Very little to go on; must stay silent rather than reach.",
+    "spec_expectation": "silence"
+  },
+  "expected": {
+    "contradictions": []
+  },
+  "expected_note": "Originally a timing fixture. Timing analysis was removed; this transcript is retained as a negative control for contradiction detection. Nothing in it is self-inconsistent, so the expected output is an empty list.",
+  "raw": {
+    "interview_id": "fx-04",
+    "candidate_id": "fx-04-cand",
+    "source": "fixture",
+    "turns": [
+      {
+        "turn_id": "q1",
+        "speaker": "agent",
+        "role": "question",
+        "text": "Tell me about your current role.",
+        "question_bucket": "experiential",
+        "start_ts": 0.0,
+        "end_ts": 4.44
+      },
+      {
+        "turn_id": "a1",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "I am on the platform team at a payments company, mostly working on the deploy tooling and the service templates.",
+        "start_ts": 5.54,
+        "end_ts": 14.02
+      },
+      {
+        "turn_id": "q2",
+        "speaker": "agent",
+        "role": "question",
+        "text": "How long have you been there?",
+        "question_bucket": "factual",
+        "start_ts": 14.92,
+        "end_ts": 19.22
+      },
+      {
+        "turn_id": "a2",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "Just over two years.",
+        "start_ts": 20.22,
+        "end_ts": 25.02
+      },
+      {
+        "turn_id": "q3",
+        "speaker": "agent",
+        "role": "question",
+        "text": "Tell me about a time you had to roll something back.",
+        "question_bucket": "experiential",
+        "start_ts": 25.92,
+        "end_ts": 31.26
+      },
+      {
+        "turn_id": "a3",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "We shipped a change to the routing layer that broke idempotency keys for one merchant. We caught it in about twenty minutes and rolled back, then replayed the affected requests.",
+        "start_ts": 39.16,
+        "end_ts": 50.24
+      },
+      {
+        "turn_id": "q4",
+        "speaker": "agent",
+        "role": "question",
+        "text": "Why are you looking to move?",
+        "question_bucket": "open_ended",
+        "start_ts": 51.14,
+        "end_ts": 55.4
+      },
+      {
+        "turn_id": "a4",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "The team I joined for has mostly gone and the work has drifted towards maintenance.",
+        "start_ts": 57.0,
+        "end_ts": 64.32
+      }
+    ]
+  }
+}

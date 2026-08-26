@@ -1,0 +1,223 @@
+{
+  "fixture": {
+    "id": 3,
+    "name": "slow_only_on_open_ended",
+    "why": "Slower on open-ended questions than factual ones, which is how most people answer. Must stay silent.",
+    "spec_expectation": "silence"
+  },
+  "expected": {
+    "contradictions": []
+  },
+  "expected_note": "Originally a timing fixture. Timing analysis was removed; this transcript is retained as a negative control for contradiction detection. Nothing in it is self-inconsistent, so the expected output is an empty list.",
+  "raw": {
+    "interview_id": "fx-03",
+    "candidate_id": "fx-03-cand",
+    "source": "fixture",
+    "turns": [
+      {
+        "turn_id": "q1",
+        "speaker": "agent",
+        "role": "question",
+        "text": "What database were you using?",
+        "question_bucket": "factual",
+        "start_ts": 0.0,
+        "end_ts": 4.3
+      },
+      {
+        "turn_id": "a1",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "MySQL, with a read replica for analytics.",
+        "start_ts": 5.3,
+        "end_ts": 10.94
+      },
+      {
+        "turn_id": "q2",
+        "speaker": "agent",
+        "role": "question",
+        "text": "Which cloud provider?",
+        "question_bucket": "factual",
+        "start_ts": 11.84,
+        "end_ts": 15.78
+      },
+      {
+        "turn_id": "a2",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "AWS, all of it.",
+        "start_ts": 16.98,
+        "end_ts": 21.58
+      },
+      {
+        "turn_id": "q3",
+        "speaker": "agent",
+        "role": "question",
+        "text": "How long were you there?",
+        "question_bucket": "factual",
+        "start_ts": 22.48,
+        "end_ts": 26.56
+      },
+      {
+        "turn_id": "a3",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "Three years and two months.",
+        "start_ts": 27.46,
+        "end_ts": 32.54
+      },
+      {
+        "turn_id": "q4",
+        "speaker": "agent",
+        "role": "question",
+        "text": "What was your title?",
+        "question_bucket": "factual",
+        "start_ts": 33.44,
+        "end_ts": 37.34
+      },
+      {
+        "turn_id": "a4",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "Senior software engineer, promoted from mid-level in year two.",
+        "start_ts": 38.44,
+        "end_ts": 44.92
+      },
+      {
+        "turn_id": "q5",
+        "speaker": "agent",
+        "role": "question",
+        "text": "Tell me about a system you designed end to end.",
+        "question_bucket": "experiential",
+        "start_ts": 45.82,
+        "end_ts": 50.94
+      },
+      {
+        "turn_id": "a5",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "The notification service. I wrote the design doc, got it reviewed by two staff engineers, and built it with one other person over about a quarter.",
+        "start_ts": 52.94,
+        "end_ts": 62.78
+      },
+      {
+        "turn_id": "q6",
+        "speaker": "agent",
+        "role": "question",
+        "text": "Describe a time you improved something nobody asked you to improve.",
+        "question_bucket": "experiential",
+        "start_ts": 63.68,
+        "end_ts": 69.69
+      },
+      {
+        "turn_id": "a6",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "Our test suite took nineteen minutes. I spent two Fridays on it and got it to six by parallelising and killing some sleeps.",
+        "start_ts": 72.09,
+        "end_ts": 81.01
+      },
+      {
+        "turn_id": "q7",
+        "speaker": "agent",
+        "role": "question",
+        "text": "Tell me about working with a difficult stakeholder.",
+        "question_bucket": "experiential",
+        "start_ts": 81.91,
+        "end_ts": 87.2
+      },
+      {
+        "turn_id": "a7",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "A director who kept changing the acceptance criteria. I started sending a one-paragraph summary after every meeting and the changes mostly stopped.",
+        "start_ts": 89.0,
+        "end_ts": 98.88
+      },
+      {
+        "turn_id": "q8",
+        "speaker": "agent",
+        "role": "question",
+        "text": "Walk me through your most recent incident.",
+        "question_bucket": "experiential",
+        "start_ts": 99.78,
+        "end_ts": 104.67
+      },
+      {
+        "turn_id": "a8",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "A memory leak in a consumer that only showed up under a particular retry pattern. We restarted on a timer for two days while I found it.",
+        "start_ts": 106.87,
+        "end_ts": 116.31
+      },
+      {
+        "turn_id": "q9",
+        "speaker": "agent",
+        "role": "question",
+        "text": "What do you think makes a codebase hard to work in?",
+        "question_bucket": "open_ended",
+        "start_ts": 117.21,
+        "end_ts": 122.5
+      },
+      {
+        "turn_id": "a9",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "Mostly it is when you cannot tell what is load-bearing. Not the size of it, the not knowing what you are allowed to change.",
+        "start_ts": 131.5,
+        "end_ts": 140.42
+      },
+      {
+        "turn_id": "q10",
+        "speaker": "agent",
+        "role": "question",
+        "text": "How do you think about technical debt?",
+        "question_bucket": "open_ended",
+        "start_ts": 141.32,
+        "end_ts": 146.03
+      },
+      {
+        "turn_id": "a10",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "As a decision that somebody made with less information than we have now. That framing makes it easier to talk about without blaming anyone.",
+        "start_ts": 154.43,
+        "end_ts": 163.99
+      },
+      {
+        "turn_id": "q11",
+        "speaker": "agent",
+        "role": "question",
+        "text": "What would you change about how your last team worked?",
+        "question_bucket": "open_ended",
+        "start_ts": 164.89,
+        "end_ts": 170.32
+      },
+      {
+        "turn_id": "a11",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "We reviewed code well and designs badly. Most of our expensive mistakes were agreed to in a meeting nobody wrote down.",
+        "start_ts": 179.92,
+        "end_ts": 188.64
+      },
+      {
+        "turn_id": "q12",
+        "speaker": "agent",
+        "role": "question",
+        "text": "What kind of engineer do you want to be?",
+        "question_bucket": "open_ended",
+        "start_ts": 189.54,
+        "end_ts": 194.34
+      },
+      {
+        "turn_id": "a12",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "The one people bring the ambiguous problem to. I am less interested in being the fastest implementer.",
+        "start_ts": 203.14,
+        "end_ts": 211.18
+      }
+    ]
+  }
+}

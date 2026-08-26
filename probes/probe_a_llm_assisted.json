@@ -1,0 +1,36 @@
+{
+  "interview_id": "probe-a-llm-assisted",
+  "candidate_id": "probe-a",
+  "source": "hand-written probe, not a frozen fixture",
+  "turns": [
+    {"turn_id": "q1", "speaker": "agent", "text": "Tell me about a technical project you owned end to end."},
+    {"turn_id": "a1", "speaker": "candidate", "text": "I led the migration of our customer analytics pipeline from a batch ETL system to a streaming architecture. The existing system ran nightly jobs in Airflow, and our stakeholders needed fresher data, so I designed and implemented a Kafka-based pipeline with Flink for stream processing. I was responsible for the architecture, the implementation of the core consumer services, and the migration plan. We completed it over roughly seven months with a team of four engineers, and we reduced data latency from twenty-four hours to under two minutes."},
+
+    {"turn_id": "q2", "speaker": "agent", "text": "How many people were on that team, and what was your role specifically?"},
+    {"turn_id": "a2", "speaker": "candidate", "text": "There were four engineers including me, and I was the technical lead. Two engineers worked on the producer side, instrumenting the upstream services to emit events, and one worked with me on the consumer and transformation layer. I owned the overall design and the schema registry work, and I reviewed the code for all of the pipeline components."},
+
+    {"turn_id": "q3", "speaker": "agent", "text": "What was the hardest technical problem you hit?"},
+    {"turn_id": "a3", "speaker": "candidate", "text": "The hardest problem was handling late-arriving and out-of-order events without producing incorrect aggregates. Our upstream services had inconsistent clock behavior, so events could arrive several minutes out of order. I implemented watermarking with a bounded delay of five minutes and used Flink's allowed lateness to route very late events to a side output for reconciliation. That let us keep the main aggregates accurate without silently dropping data."},
+
+    {"turn_id": "q4", "speaker": "agent", "text": "Tell me about a time something went wrong on that project."},
+    {"turn_id": "a4", "speaker": "candidate", "text": "About three months into the migration we discovered that our schema evolution strategy was breaking downstream consumers. We had been using Avro with backward compatibility, but one team added a required field without a default, which caused deserialization failures in production for about forty minutes. I led the incident response, rolled back the schema, and then introduced a CI check in the schema registry that rejects incompatible changes before merge. We had no schema-related incidents after that."},
+
+    {"turn_id": "q5", "speaker": "agent", "text": "How did you measure whether the project succeeded?"},
+    {"turn_id": "a5", "speaker": "candidate", "text": "We tracked three metrics. End-to-end latency, which went from twenty-four hours to about ninety seconds at p99. Data completeness, which we measured by reconciling the streaming aggregates against the legacy batch output during a three-month dual-run period, where we held above 99.9 percent agreement. And adoption, measured as the number of downstream teams migrated off the batch tables, which was all eleven of them by the end."},
+
+    {"turn_id": "q6", "speaker": "agent", "text": "How long did the whole thing take, start to finish?"},
+    {"turn_id": "a6", "speaker": "candidate", "text": "Seven months from the start of design to full cutover, plus an additional three months of dual-running where both systems were live and we were reconciling their outputs. So ten months before we decommissioned the batch jobs, though the migration itself was the seven."},
+
+    {"turn_id": "q7", "speaker": "agent", "text": "Was there a part of the system you built personally, rather than led?"},
+    {"turn_id": "a7", "speaker": "candidate", "text": "Yes. I built the schema registry integration and the consumer framework myself. The framework was the piece the other engineers built their individual consumers on top of, so I wrote that first and then supported them as they adopted it. I also personally handled the Terraform for the Kafka cluster, because we did not have a platform team at the time."},
+
+    {"turn_id": "q8", "speaker": "agent", "text": "Tell me about a disagreement with a stakeholder."},
+    {"turn_id": "a8", "speaker": "candidate", "text": "The head of analytics wanted us to cut the dual-run period from three months to three weeks, because the duplicated infrastructure cost was significant. I disagreed, and I put together a document showing the reconciliation discrepancies we were still finding in week six, most of which came from edge cases in the refund flow. Once he saw that we were still catching real correctness bugs, he agreed to keep the full three months. I think being specific about what we would miss was what made the argument work rather than just asserting that we needed more time."},
+
+    {"turn_id": "q9", "speaker": "agent", "text": "What technologies did you use?"},
+    {"turn_id": "a9", "speaker": "candidate", "text": "Kafka for the event backbone, Flink for stream processing, Avro with Confluent Schema Registry for serialization, and Postgres for the serving layer that the BI tools read from. The legacy system was Airflow and Spark on EMR, which we kept running through the dual-run period. Infrastructure was Terraform on AWS."},
+
+    {"turn_id": "q10", "speaker": "agent", "text": "What would you do differently?"},
+    {"turn_id": "a10", "speaker": "candidate", "text": "I would introduce the schema compatibility CI check at the beginning rather than after the incident. We treated schema governance as a process problem and relied on convention and review, and it took a production failure to make us enforce it in the tooling. The check itself took two days to write. That is the clearest case I have of a preventable incident where the prevention was cheaper than the response."}
+  ]
+}

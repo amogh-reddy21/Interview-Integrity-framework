@@ -1,0 +1,172 @@
+{
+  "fixture": {
+    "id": 9,
+    "name": "same_fact_rephrased",
+    "why": "One fact stated three different ways across the interview because the agent asks three overlapping questions.",
+    "spec_expectation": "Zero"
+  },
+  "expected": {
+    "contradictions": []
+  },
+  "expected_note": "Owned it, was mine end to end, was the one driving it, and owning something completely are four wordings of one fact. Sole ownership is also consistent with others touching it and being secondary on call. Nothing here conflicts.",
+  "raw": {
+    "interview_id": "fx-09",
+    "candidate_id": "fx-09-cand",
+    "source": "fixture",
+    "turns": [
+      {
+        "turn_id": "q1",
+        "speaker": "agent",
+        "role": "question",
+        "text": "What were you responsible for in that role?",
+        "question_bucket": "factual",
+        "start_ts": 0.0,
+        "end_ts": 4.93
+      },
+      {
+        "turn_id": "a1",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "I owned the ingestion pipeline.",
+        "start_ts": 6.23,
+        "end_ts": 11.47
+      },
+      {
+        "turn_id": "q2",
+        "speaker": "agent",
+        "role": "question",
+        "text": "Tell me about the piece of the system you knew best.",
+        "question_bucket": "experiential",
+        "start_ts": 12.37,
+        "end_ts": 17.71
+      },
+      {
+        "turn_id": "a2",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "The ingestion pipeline was mine end to end. I built the first version and I was the person people came to when it broke.",
+        "start_ts": 19.91,
+        "end_ts": 28.71
+      },
+      {
+        "turn_id": "q3",
+        "speaker": "agent",
+        "role": "question",
+        "text": "Who else worked on ingestion?",
+        "question_bucket": "factual",
+        "start_ts": 29.61,
+        "end_ts": 33.91
+      },
+      {
+        "turn_id": "a3",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "Nobody full time. Other people touched it, but I was the one driving that pipeline.",
+        "start_ts": 35.51,
+        "end_ts": 42.83
+      },
+      {
+        "turn_id": "q4",
+        "speaker": "agent",
+        "role": "question",
+        "text": "How did you handle being the only person who knew it?",
+        "question_bucket": "experiential",
+        "start_ts": 43.73,
+        "end_ts": 49.11
+      },
+      {
+        "turn_id": "a4",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "Badly at first. Eventually I wrote the design up properly and ran two sessions on it so I was not the single point of failure.",
+        "start_ts": 51.91,
+        "end_ts": 60.95
+      },
+      {
+        "turn_id": "q5",
+        "speaker": "agent",
+        "role": "question",
+        "text": "What did it ingest?",
+        "question_bucket": "factual",
+        "start_ts": 61.85,
+        "end_ts": 65.7
+      },
+      {
+        "turn_id": "a5",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "Clickstream events, about two hundred million a day.",
+        "start_ts": 66.8,
+        "end_ts": 72.88
+      },
+      {
+        "turn_id": "q6",
+        "speaker": "agent",
+        "role": "question",
+        "text": "Tell me about a change you made to it that mattered.",
+        "question_bucket": "experiential",
+        "start_ts": 73.78,
+        "end_ts": 79.12
+      },
+      {
+        "turn_id": "a6",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "I moved it from batch to streaming. Same pipeline, but the freshness went from six hours to under a minute.",
+        "start_ts": 81.62,
+        "end_ts": 89.9
+      },
+      {
+        "turn_id": "q7",
+        "speaker": "agent",
+        "role": "question",
+        "text": "Was anyone else on call for it?",
+        "question_bucket": "factual",
+        "start_ts": 90.8,
+        "end_ts": 95.19
+      },
+      {
+        "turn_id": "a7",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "I was primary. Two others were secondary, but in practice it came to me.",
+        "start_ts": 96.59,
+        "end_ts": 103.47
+      },
+      {
+        "turn_id": "q8",
+        "speaker": "agent",
+        "role": "question",
+        "text": "What did you like about that work?",
+        "question_bucket": "open_ended",
+        "start_ts": 104.37,
+        "end_ts": 108.9
+      },
+      {
+        "turn_id": "a8",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "Owning something completely. I knew every edge of that pipeline.",
+        "start_ts": 112.0,
+        "end_ts": 118.56
+      },
+      {
+        "turn_id": "q9",
+        "speaker": "agent",
+        "role": "question",
+        "text": "What did you not like?",
+        "question_bucket": "open_ended",
+        "start_ts": 119.46,
+        "end_ts": 123.45
+      },
+      {
+        "turn_id": "a9",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "Being the bottleneck. Ownership and bottleneck turned out to be the same thing.",
+        "start_ts": 126.15,
+        "end_ts": 133.31
+      }
+    ]
+  }
+}

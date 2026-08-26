@@ -1,0 +1,206 @@
+{
+  "fixture": {
+    "id": 11,
+    "name": "clean_strong_interview",
+    "why": "A strong candidate, answering honestly, at human speed. The baseline case: both detectors silent.",
+    "spec_expectation": "silence"
+  },
+  "expected": {
+    "contradictions": []
+  },
+  "expected_note": "Latencies range 0.9-5.1s with natural spread; the widest within-bucket deviation is about 2x the median, under the discontinuity gate, and the coefficient of variation is around 0.5. The account is internally consistent: three engineers with a named personal scope, six weeks of parallel running, sixty engineers at the org level. Empty output on both detectors is the success case here.",
+  "raw": {
+    "interview_id": "fx-11",
+    "candidate_id": "fx-11-cand",
+    "source": "fixture",
+    "turns": [
+      {
+        "turn_id": "q1",
+        "speaker": "agent",
+        "role": "question",
+        "text": "How long were you at your last company?",
+        "question_bucket": "factual",
+        "start_ts": 0.0,
+        "end_ts": 4.75
+      },
+      {
+        "turn_id": "a1",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "Four years, from 2021 until earlier this year.",
+        "start_ts": 5.65,
+        "end_ts": 11.49
+      },
+      {
+        "turn_id": "q2",
+        "speaker": "agent",
+        "role": "question",
+        "text": "Tell me about the project you are proudest of.",
+        "question_bucket": "experiential",
+        "start_ts": 12.39,
+        "end_ts": 17.46
+      },
+      {
+        "turn_id": "a2",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "We replaced a nightly batch that took eleven hours with an incremental pipeline that ran in about twenty minutes. I was one of three engineers on it and I owned the change-data-capture piece specifically.",
+        "start_ts": 20.56,
+        "end_ts": 32.72
+      },
+      {
+        "turn_id": "q3",
+        "speaker": "agent",
+        "role": "question",
+        "text": "What did you use for change data capture?",
+        "question_bucket": "factual",
+        "start_ts": 33.62,
+        "end_ts": 38.46
+      },
+      {
+        "turn_id": "a3",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "Debezium into Kafka, then a merge job on the warehouse side.",
+        "start_ts": 40.36,
+        "end_ts": 46.76
+      },
+      {
+        "turn_id": "q4",
+        "speaker": "agent",
+        "role": "question",
+        "text": "What was the hardest part?",
+        "question_bucket": "experiential",
+        "start_ts": 47.66,
+        "end_ts": 51.83
+      },
+      {
+        "turn_id": "a4",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "Convincing people the numbers were right. The old batch had bugs, so when the new pipeline disagreed with it, everyone assumed we were wrong.",
+        "start_ts": 53.33,
+        "end_ts": 62.97
+      },
+      {
+        "turn_id": "q5",
+        "speaker": "agent",
+        "role": "question",
+        "text": "How did you resolve that?",
+        "question_bucket": "factual",
+        "start_ts": 63.87,
+        "end_ts": 67.99
+      },
+      {
+        "turn_id": "a5",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "We ran both for six weeks and published a daily diff with an explanation for every discrepancy.",
+        "start_ts": 69.19,
+        "end_ts": 76.99
+      },
+      {
+        "turn_id": "q6",
+        "speaker": "agent",
+        "role": "question",
+        "text": "Tell me about a time you were wrong about something technical.",
+        "question_bucket": "experiential",
+        "start_ts": 77.89,
+        "end_ts": 83.68
+      },
+      {
+        "turn_id": "a6",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "I argued hard for keeping everything in one repo, and I was wrong about the CI cost. It got to the point where a one-line change took twenty-five minutes to validate, and splitting it later was much more painful than doing it up front would have been.",
+        "start_ts": 87.88,
+        "end_ts": 101.92
+      },
+      {
+        "turn_id": "q7",
+        "speaker": "agent",
+        "role": "question",
+        "text": "How do you approach a codebase you have never seen?",
+        "question_bucket": "open_ended",
+        "start_ts": 102.82,
+        "end_ts": 108.11
+      },
+      {
+        "turn_id": "a7",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "I find the deploy pipeline first. It tells you what actually runs, which is usually a smaller set than what is in the repo.",
+        "start_ts": 110.81,
+        "end_ts": 119.73
+      },
+      {
+        "turn_id": "q8",
+        "speaker": "agent",
+        "role": "question",
+        "text": "Tell me about working with someone whose style differed from yours.",
+        "question_bucket": "experiential",
+        "start_ts": 120.63,
+        "end_ts": 126.64
+      },
+      {
+        "turn_id": "a8",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "I worked with an engineer who wanted every design written up before any code. I like to prototype first. We settled on prototype, then write it up, and honestly the write-ups were better for having a prototype behind them.",
+        "start_ts": 128.64,
+        "end_ts": 141.52
+      },
+      {
+        "turn_id": "q9",
+        "speaker": "agent",
+        "role": "question",
+        "text": "What would make you leave a job?",
+        "question_bucket": "open_ended",
+        "start_ts": 142.42,
+        "end_ts": 146.86
+      },
+      {
+        "turn_id": "a9",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "Not being able to see the effect of what I build. I left a role once where the work was fine and it shipped into a void, and I was much less useful there than I should have been.",
+        "start_ts": 151.96,
+        "end_ts": 163.08
+      },
+      {
+        "turn_id": "q10",
+        "speaker": "agent",
+        "role": "question",
+        "text": "How large was the engineering org?",
+        "question_bucket": "factual",
+        "start_ts": 163.98,
+        "end_ts": 168.51
+      },
+      {
+        "turn_id": "a10",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "Around sixty engineers when I left, maybe forty when I joined.",
+        "start_ts": 170.91,
+        "end_ts": 177.39
+      },
+      {
+        "turn_id": "q11",
+        "speaker": "agent",
+        "role": "question",
+        "text": "What questions do you have for us?",
+        "question_bucket": "open_ended",
+        "start_ts": 178.29,
+        "end_ts": 182.82
+      },
+      {
+        "turn_id": "a11",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "Mostly about how much of the pipeline work is greenfield versus keeping the existing thing alive.",
+        "start_ts": 184.62,
+        "end_ts": 192.5
+      }
+    ]
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "fixture": {
+    "id": 8,
+    "name": "self_correction",
+    "why": "The candidate corrects their own numbers mid-answer, out loud. This is honesty, not conflict, and it is the primary false-positive risk.",
+    "spec_expectation": "Zero"
+  },
+  "expected": {
+    "contradictions": []
+  },
+  "expected_note": "Five separate self-corrections, all signalled out loud with sorry, actually, no, or I forgot, and all resolved inside the same answer. A detector that reads the first half of a correction as statement_a and the second half as statement_b fires five times here. It must fire zero.",
+  "raw": {
+    "interview_id": "fx-08",
+    "candidate_id": "fx-08-cand",
+    "source": "fixture",
+    "turns": [
+      {
+        "turn_id": "q1",
+        "speaker": "agent",
+        "role": "question",
+        "text": "What was your role on the team?",
+        "question_bucket": "factual",
+        "start_ts": 0.0,
+        "end_ts": 4.39
+      },
+      {
+        "turn_id": "a1",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "Tech lead, though we did not really use the title.",
+        "start_ts": 5.59,
+        "end_ts": 11.59
+      },
+      {
+        "turn_id": "q2",
+        "speaker": "agent",
+        "role": "question",
+        "text": "Tell me about the size of the team you led.",
+        "question_bucket": "experiential",
+        "start_ts": 12.49,
+        "end_ts": 17.42
+      },
+      {
+        "turn_id": "a2",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "There were four of us on it, sorry, five if you count the intern who joined for the last two months. So four permanent and one intern.",
+        "start_ts": 19.82,
+        "end_ts": 29.18
+      },
+      {
+        "turn_id": "q3",
+        "speaker": "agent",
+        "role": "question",
+        "text": "How long did the project run?",
+        "question_bucket": "factual",
+        "start_ts": 30.08,
+        "end_ts": 34.38
+      },
+      {
+        "turn_id": "a3",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "About six months. Actually, closer to eight if you count the pilot we ran before it was properly funded, but six months of real work.",
+        "start_ts": 35.88,
+        "end_ts": 45.2
+      },
+      {
+        "turn_id": "q4",
+        "speaker": "agent",
+        "role": "question",
+        "text": "Walk me through the architecture you settled on.",
+        "question_bucket": "experiential",
+        "start_ts": 46.1,
+        "end_ts": 51.26
+      },
+      {
+        "turn_id": "a4",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "Three services behind an API gateway. No, two, we merged the auth one into the gateway itself before launch, so two services and the gateway.",
+        "start_ts": 54.26,
+        "end_ts": 63.9
+      },
+      {
+        "turn_id": "q5",
+        "speaker": "agent",
+        "role": "question",
+        "text": "What was the launch date?",
+        "question_bucket": "factual",
+        "start_ts": 64.8,
+        "end_ts": 68.92
+      },
+      {
+        "turn_id": "a5",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "March. March the eleventh, I think, it might have been the fourteenth.",
+        "start_ts": 70.02,
+        "end_ts": 76.82
+      },
+      {
+        "turn_id": "q6",
+        "speaker": "agent",
+        "role": "question",
+        "text": "What was your own contribution specifically?",
+        "question_bucket": "experiential",
+        "start_ts": 77.72,
+        "end_ts": 82.7
+      },
+      {
+        "turn_id": "a6",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "I wrote the ingestion layer and reviewed most of the rest. And the deploy pipeline, I forgot that, I did that too.",
+        "start_ts": 84.8,
+        "end_ts": 93.36
+      },
+      {
+        "turn_id": "q7",
+        "speaker": "agent",
+        "role": "question",
+        "text": "How many users did it end up with?",
+        "question_bucket": "factual",
+        "start_ts": 94.26,
+        "end_ts": 98.79
+      },
+      {
+        "turn_id": "a7",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "About twelve thousand monthly. Twelve, maybe thirteen by the time I left.",
+        "start_ts": 100.59,
+        "end_ts": 107.51
+      },
+      {
+        "turn_id": "q8",
+        "speaker": "agent",
+        "role": "question",
+        "text": "What are you most proud of there?",
+        "question_bucket": "open_ended",
+        "start_ts": 108.41,
+        "end_ts": 112.89
+      },
+      {
+        "turn_id": "a8",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "That we shipped it with two people less than the original plan asked for.",
+        "start_ts": 116.19,
+        "end_ts": 123.11
+      },
+      {
+        "turn_id": "q9",
+        "speaker": "agent",
+        "role": "question",
+        "text": "Anything you would change?",
+        "question_bucket": "open_ended",
+        "start_ts": 124.01,
+        "end_ts": 128.18
+      },
+      {
+        "turn_id": "a9",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "I would have written the runbook before launch instead of after the first incident.",
+        "start_ts": 130.78,
+        "end_ts": 138.1
+      }
+    ]
+  }
+}

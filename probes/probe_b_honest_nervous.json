@@ -1,0 +1,36 @@
+{
+  "interview_id": "probe-b-honest-nervous",
+  "candidate_id": "probe-b",
+  "source": "hand-written probe, not a frozen fixture",
+  "turns": [
+    {"turn_id": "q1", "speaker": "agent", "text": "Tell me about a technical project you owned end to end."},
+    {"turn_id": "a1", "speaker": "candidate", "text": "Um, okay, so - probably the invoice reconciliation thing? That was, I mean, I wouldn't say I owned all of it, but I did most of the actual work on it. So basically finance was closing the books manually every month and it took them like a week, and I built a service that pulled from the payments provider and matched it against our internal ledger. Sorry, I should say, there was an existing script that did part of the matching already, I didn't start from nothing."},
+
+    {"turn_id": "q2", "speaker": "agent", "text": "How many people were on that team, and what was your role specifically?"},
+    {"turn_id": "a2", "speaker": "candidate", "text": "It was, uh, three of us? Three. Well - four if you count Priya, but she was only on it for the first month or so before she moved over to the mobile team. So mostly three. And I was just an engineer on it, there wasn't really a lead, it was pretty informal."},
+
+    {"turn_id": "q3", "speaker": "agent", "text": "What was the hardest technical problem you hit?"},
+    {"turn_id": "a3", "speaker": "candidate", "text": "The hard part was honestly not the code, it was that the payments provider's API would return, um, partial data for refunds. Like a refund would show up as two separate records sometimes, and one of them wouldn't have the original transaction id on it. So we'd double count. I spent, god, probably three weeks just on that one case. Which felt insane at the time but it was the whole thing really."},
+
+    {"turn_id": "q4", "speaker": "agent", "text": "How long did the whole thing take, start to finish?"},
+    {"turn_id": "a4", "speaker": "candidate", "text": "How long? Uh, that's a good question. I want to say four months? But that's - okay, if I'm honest the first version shipped in like six weeks, and then we kept fixing things for another few months after that. So four months total-ish if you count all of it. Maybe five. I'm bad at this, sorry."},
+
+    {"turn_id": "q5", "speaker": "agent", "text": "Was there a part of the system you built personally, rather than led?"},
+    {"turn_id": "a5", "speaker": "candidate", "text": "I mean I wrote most of the matching logic, that was me. The deployment stuff was Dev - Devendra, he set all that up, I don't want to take credit for that part. And the finance side, like the actual accounting rules for what counts as matched, that was all from Marie in finance, I just implemented what she told me. So the logic is mine but the rules aren't, if that makes sense."},
+
+    {"turn_id": "q6", "speaker": "agent", "text": "How did you measure whether the project succeeded?"},
+    {"turn_id": "a6", "speaker": "candidate", "text": "It cut the close from about a week to, I think two days? Maybe a day and a half. Marie would know better than me honestly. And it wasn't like a fully automated thing at the end, they still review everything, it just does the boring part. I don't want to oversell it."},
+
+    {"turn_id": "q7", "speaker": "agent", "text": "Tell me about a time you worked on a larger team."},
+    {"turn_id": "a7", "speaker": "candidate", "text": "Yeah, the reporting rewrite. That was like eight, nine people? Nine I think, across two teams. Totally different thing from the invoice stuff though, that was a year later and it was mostly frontend which I'm not really. I did the query layer on that one, the part that talked to the warehouse."},
+
+    {"turn_id": "q8", "speaker": "agent", "text": "Tell me about a time something went wrong."},
+    {"turn_id": "a8", "speaker": "candidate", "text": "Okay so on the invoice thing, there was an encoding bug where certain vendor names with accents in them got mangled, and it meant those invoices never matched, they just fell into the manual pile. And nobody noticed for like two months. Which sounds worse than it was because the manual pile existed anyway, so it just looked like normal work to finance. Marie eventually caught it because the totals were off by a consistent amount and she chased it."},
+
+    {"turn_id": "q9", "speaker": "agent", "text": "What technologies did you use?"},
+    {"turn_id": "a9", "speaker": "candidate", "text": "Python for the service, and Postgres for the ledger side. The payments data came in as, uh, JSON blobs that we dumped in S3 first and then processed, because the API was rate limited pretty aggressively so we couldn't just query it live. There was some Airflow in there too for scheduling but I didn't set that up."},
+
+    {"turn_id": "q10", "speaker": "agent", "text": "What would you do differently?"},
+    {"turn_id": "a10", "speaker": "candidate", "text": "Uh. Probably would have talked to Marie a lot earlier? Like I spent the first couple weeks building what I thought reconciliation meant and then she explained how it actually works in accounting and a bunch of that came out. Also the encoding thing, we should have had a test with, you know, non-ASCII names in it from the start. That one still bugs me."}
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "fixture": {
+    "id": 7,
+    "name": "planted_team_size_contradiction",
+    "why": "Two statements about the same migration that cannot both be true: led a team of four, and did it essentially alone.",
+    "spec_expectation": "1 contradiction"
+  },
+  "expected": {
+    "contradictions": [
+      {
+        "conflict_type": "team_size",
+        "turn_a": "a2",
+        "turn_b": "a8"
+      }
+    ]
+  },
+  "expected_note": "a2 claims a team of four under the candidate's leadership; a8 says the work was essentially solo with no help. Same project, same period, mutually exclusive. Both quotes must come back verbatim with turn ids a2 and a8. Latencies are naturally varied, so timing stays empty.",
+  "raw": {
+    "interview_id": "fx-07",
+    "candidate_id": "fx-07-cand",
+    "source": "fixture",
+    "turns": [
+      {
+        "turn_id": "q1",
+        "speaker": "agent",
+        "role": "question",
+        "text": "What was your title in that role?",
+        "question_bucket": "factual",
+        "start_ts": 0.0,
+        "end_ts": 4.48
+      },
+      {
+        "turn_id": "a1",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "Staff engineer, on the data platform team.",
+        "start_ts": 5.58,
+        "end_ts": 11.26
+      },
+      {
+        "turn_id": "q2",
+        "speaker": "agent",
+        "role": "question",
+        "text": "Tell me about the largest project you have worked on.",
+        "question_bucket": "experiential",
+        "start_ts": 12.16,
+        "end_ts": 17.54
+      },
+      {
+        "turn_id": "a2",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "The warehouse migration, moving us off Redshift onto Snowflake. I led a team of four on the migration, and it ran about nine months end to end.",
+        "start_ts": 19.74,
+        "end_ts": 29.46
+      },
+      {
+        "turn_id": "q3",
+        "speaker": "agent",
+        "role": "question",
+        "text": "How much data was involved?",
+        "question_bucket": "factual",
+        "start_ts": 30.36,
+        "end_ts": 34.57
+      },
+      {
+        "turn_id": "a3",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "About two hundred terabytes, though a lot of that was cold and we archived it rather than moving it.",
+        "start_ts": 36.17,
+        "end_ts": 44.17
+      },
+      {
+        "turn_id": "q4",
+        "speaker": "agent",
+        "role": "question",
+        "text": "What was the hardest part of that migration?",
+        "question_bucket": "experiential",
+        "start_ts": 45.07,
+        "end_ts": 50.05
+      },
+      {
+        "turn_id": "a4",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "The stored procedures. There were a few hundred of them and no test coverage, so we had to run both warehouses in parallel and diff the outputs for a month.",
+        "start_ts": 51.75,
+        "end_ts": 61.99
+      },
+      {
+        "turn_id": "q5",
+        "speaker": "agent",
+        "role": "question",
+        "text": "Did you have a deadline?",
+        "question_bucket": "factual",
+        "start_ts": 62.89,
+        "end_ts": 66.97
+      },
+      {
+        "turn_id": "a5",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "The Redshift contract renewal, so yes, a hard one.",
+        "start_ts": 68.27,
+        "end_ts": 74.27
+      },
+      {
+        "turn_id": "q6",
+        "speaker": "agent",
+        "role": "question",
+        "text": "What did you learn from it?",
+        "question_bucket": "open_ended",
+        "start_ts": 75.17,
+        "end_ts": 79.38
+      },
+      {
+        "turn_id": "a6",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "That the technical work is the easy half. Getting forty analysts to change their queries was harder than moving the data.",
+        "start_ts": 82.28,
+        "end_ts": 91.12
+      },
+      {
+        "turn_id": "q7",
+        "speaker": "agent",
+        "role": "question",
+        "text": "Were you still there when it finished?",
+        "question_bucket": "factual",
+        "start_ts": 92.02,
+        "end_ts": 96.73
+      },
+      {
+        "turn_id": "a7",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "Yes, I stayed about six months after we cut over.",
+        "start_ts": 98.13,
+        "end_ts": 104.09
+      },
+      {
+        "turn_id": "q8",
+        "speaker": "agent",
+        "role": "question",
+        "text": "How did you divide up the work on that project?",
+        "question_bucket": "experiential",
+        "start_ts": 104.99,
+        "end_ts": 110.11
+      },
+      {
+        "turn_id": "a8",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "Honestly it was mostly just me. I did not really have help on that one, everyone else was tied up on the reporting rewrite, so I picked it up and ground through it.",
+        "start_ts": 112.71,
+        "end_ts": 123.27
+      },
+      {
+        "turn_id": "q9",
+        "speaker": "agent",
+        "role": "question",
+        "text": "What would you do differently?",
+        "question_bucket": "open_ended",
+        "start_ts": 124.17,
+        "end_ts": 128.52
+      },
+      {
+        "turn_id": "a9",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "Start the query migration earlier and in parallel, rather than treating it as the last step.",
+        "start_ts": 131.92,
+        "end_ts": 139.6
+      }
+    ]
+  }
+}

@@ -1,0 +1,271 @@
+{
+  "_comment": [
+    "Randomized question pool. Prevention, not detection: if the agent asks the",
+    "same eight questions every interview, they end up on a forum within weeks",
+    "and we would be building a detector against a leak we created ourselves.",
+    "Selection is randomized per interview but the count per bucket is fixed, so",
+    "every candidate gets the same shape of interview.",
+    "'added' drives rotation age. Retire a question by setting 'retired' to a date;",
+    "retired questions stay here so old transcripts can still resolve their bucket."
+  ],
+  "per_interview_counts": {
+    "factual": 4,
+    "experiential": 4,
+    "open_ended": 4
+  },
+  "rotation_max_age_days": 90,
+  "questions": [
+    {
+      "question_id": "F001",
+      "bucket": "factual",
+      "text": "Which version of the main language or runtime were you on in that role?",
+      "added": "2026-08-21",
+      "retired": null
+    },
+    {
+      "question_id": "F002",
+      "bucket": "factual",
+      "text": "How large was the dataset or request volume you were working with?",
+      "added": "2026-08-21",
+      "retired": null
+    },
+    {
+      "question_id": "F003",
+      "bucket": "factual",
+      "text": "How many people were on the team you worked with most closely?",
+      "added": "2026-08-21",
+      "retired": null
+    },
+    {
+      "question_id": "F004",
+      "bucket": "factual",
+      "text": "How long were you in that role?",
+      "added": "2026-08-21",
+      "retired": null
+    },
+    {
+      "question_id": "F005",
+      "bucket": "factual",
+      "text": "What was your job title when you left?",
+      "added": "2026-08-21",
+      "retired": null
+    },
+    {
+      "question_id": "F006",
+      "bucket": "factual",
+      "text": "Which cloud provider or hosting setup were you using?",
+      "added": "2026-08-21",
+      "retired": null
+    },
+    {
+      "question_id": "F007",
+      "bucket": "factual",
+      "text": "Were you part of an on-call rotation, and how often?",
+      "added": "2026-08-21",
+      "retired": null
+    },
+    {
+      "question_id": "F008",
+      "bucket": "factual",
+      "text": "What did you use for continuous integration?",
+      "added": "2026-08-21",
+      "retired": null
+    },
+    {
+      "question_id": "F009",
+      "bucket": "factual",
+      "text": "How often did your team deploy to production?",
+      "added": "2026-08-21",
+      "retired": null
+    },
+    {
+      "question_id": "F010",
+      "bucket": "factual",
+      "text": "What is the difference between optimistic and pessimistic locking?",
+      "added": "2026-08-21",
+      "retired": null
+    },
+    {
+      "question_id": "F011",
+      "bucket": "factual",
+      "text": "In plain terms, what does an index do to a read and to a write?",
+      "added": "2026-08-21",
+      "retired": null
+    },
+    {
+      "question_id": "F012",
+      "bucket": "factual",
+      "text": "What is the practical difference between a queue and a log?",
+      "added": "2026-08-21",
+      "retired": null
+    },
+    {
+      "question_id": "E001",
+      "bucket": "experiential",
+      "text": "Walk me through a project you owned end to end.",
+      "added": "2026-08-21",
+      "retired": null
+    },
+    {
+      "question_id": "E002",
+      "bucket": "experiential",
+      "text": "Tell me about a time you had to debug something in production under time pressure.",
+      "added": "2026-08-21",
+      "retired": null
+    },
+    {
+      "question_id": "E003",
+      "bucket": "experiential",
+      "text": "Describe a disagreement you had with a teammate about a technical decision.",
+      "added": "2026-08-21",
+      "retired": null
+    },
+    {
+      "question_id": "E004",
+      "bucket": "experiential",
+      "text": "Tell me about a mistake you made that had real consequences.",
+      "added": "2026-08-21",
+      "retired": null
+    },
+    {
+      "question_id": "E005",
+      "bucket": "experiential",
+      "text": "Describe a project where the requirements changed partway through.",
+      "added": "2026-08-21",
+      "retired": null
+    },
+    {
+      "question_id": "E006",
+      "bucket": "experiential",
+      "text": "Tell me about a time you had to explain something technical to a non-technical stakeholder.",
+      "added": "2026-08-21",
+      "retired": null
+    },
+    {
+      "question_id": "E007",
+      "bucket": "experiential",
+      "text": "Describe something you improved that nobody asked you to improve.",
+      "added": "2026-08-21",
+      "retired": null
+    },
+    {
+      "question_id": "E008",
+      "bucket": "experiential",
+      "text": "Tell me about a time you were wrong about something technical.",
+      "added": "2026-08-21",
+      "retired": null
+    },
+    {
+      "question_id": "E009",
+      "bucket": "experiential",
+      "text": "Describe how you divided up work on your last significant project.",
+      "added": "2026-08-21",
+      "retired": null
+    },
+    {
+      "question_id": "E010",
+      "bucket": "experiential",
+      "text": "Tell me about a time you pushed back on a deadline or a scope decision.",
+      "added": "2026-08-21",
+      "retired": null
+    },
+    {
+      "question_id": "E011",
+      "bucket": "experiential",
+      "text": "Describe a time you had to learn an unfamiliar system quickly.",
+      "added": "2026-08-21",
+      "retired": null
+    },
+    {
+      "question_id": "E012",
+      "bucket": "experiential",
+      "text": "Tell me about someone you worked with whose style differed from yours.",
+      "added": "2026-08-21",
+      "retired": null
+    },
+    {
+      "question_id": "O001",
+      "bucket": "open_ended",
+      "text": "How do you think about the trade-off between shipping fast and building something maintainable?",
+      "added": "2026-08-21",
+      "retired": null
+    },
+    {
+      "question_id": "O002",
+      "bucket": "open_ended",
+      "text": "How do you approach a codebase you have never seen before?",
+      "added": "2026-08-21",
+      "retired": null
+    },
+    {
+      "question_id": "O003",
+      "bucket": "open_ended",
+      "text": "What makes a codebase hard to work in?",
+      "added": "2026-08-21",
+      "retired": null
+    },
+    {
+      "question_id": "O004",
+      "bucket": "open_ended",
+      "text": "How do you decide what to work on when everything is urgent?",
+      "added": "2026-08-21",
+      "retired": null
+    },
+    {
+      "question_id": "O005",
+      "bucket": "open_ended",
+      "text": "What does a good engineering culture look like to you?",
+      "added": "2026-08-21",
+      "retired": null
+    },
+    {
+      "question_id": "O006",
+      "bucket": "open_ended",
+      "text": "How do you think about technical debt?",
+      "added": "2026-08-21",
+      "retired": null
+    },
+    {
+      "question_id": "O007",
+      "bucket": "open_ended",
+      "text": "What do you look for when you review someone else's code?",
+      "added": "2026-08-21",
+      "retired": null
+    },
+    {
+      "question_id": "O008",
+      "bucket": "open_ended",
+      "text": "What would make you leave a job?",
+      "added": "2026-08-21",
+      "retired": null
+    },
+    {
+      "question_id": "O009",
+      "bucket": "open_ended",
+      "text": "What kind of problems do you want to be working on next?",
+      "added": "2026-08-21",
+      "retired": null
+    },
+    {
+      "question_id": "O010",
+      "bucket": "open_ended",
+      "text": "How do you keep up with changes in the field?",
+      "added": "2026-08-21",
+      "retired": null
+    },
+    {
+      "question_id": "O011",
+      "bucket": "open_ended",
+      "text": "What would you change about how your last team worked?",
+      "added": "2026-08-21",
+      "retired": null
+    },
+    {
+      "question_id": "O012",
+      "bucket": "open_ended",
+      "text": "What questions do you have about how we work?",
+      "added": "2026-08-21",
+      "retired": null
+    }
+  ]
+}

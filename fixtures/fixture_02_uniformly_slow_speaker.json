@@ -1,0 +1,190 @@
+{
+  "fixture": {
+    "id": 2,
+    "name": "uniformly_slow_speaker",
+    "why": "A consistent second-language speaker, slower throughout. Must stay silent -- pace is not a signal and is not read.",
+    "spec_expectation": "silence",
+    "candidate_note": "Second-language speaker, deliberate, takes a beat before every answer."
+  },
+  "expected": {
+    "contradictions": []
+  },
+  "expected_note": "Originally a timing fixture. Timing analysis was removed; this transcript is retained as a negative control for contradiction detection. Nothing in it is self-inconsistent, so the expected output is an empty list.",
+  "raw": {
+    "interview_id": "fx-02",
+    "candidate_id": "fx-02-cand",
+    "source": "fixture",
+    "turns": [
+      {
+        "turn_id": "q1",
+        "speaker": "agent",
+        "role": "question",
+        "text": "Walk me through a project you are proud of.",
+        "question_bucket": "experiential",
+        "start_ts": 0.0,
+        "end_ts": 4.93
+      },
+      {
+        "turn_id": "a1",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "The billing reconciliation service. Finance was closing the month by hand in spreadsheets and we got it down to a scheduled job with an exceptions queue.",
+        "start_ts": 12.33,
+        "end_ts": 22.45
+      },
+      {
+        "turn_id": "q2",
+        "speaker": "agent",
+        "role": "question",
+        "text": "What languages do you use most?",
+        "question_bucket": "factual",
+        "start_ts": 23.35,
+        "end_ts": 27.74
+      },
+      {
+        "turn_id": "a2",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "Python mostly, and enough Go to be dangerous. SQL every day.",
+        "start_ts": 36.34,
+        "end_ts": 42.74
+      },
+      {
+        "turn_id": "q3",
+        "speaker": "agent",
+        "role": "question",
+        "text": "How do you decide what to work on when everything is urgent?",
+        "question_bucket": "open_ended",
+        "start_ts": 43.64,
+        "end_ts": 49.34
+      },
+      {
+        "turn_id": "a3",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "I look for the thing that is blocking other people first. My own work can wait a day, somebody else's team waiting on me cannot.",
+        "start_ts": 56.34,
+        "end_ts": 65.46
+      },
+      {
+        "turn_id": "q4",
+        "speaker": "agent",
+        "role": "question",
+        "text": "Tell me about a mistake you made that had real consequences.",
+        "question_bucket": "experiential",
+        "start_ts": 66.36,
+        "end_ts": 72.06
+      },
+      {
+        "turn_id": "a4",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "I dropped an index on a table I thought was unused during a cleanup. Reporting queries went from two seconds to four minutes and it took us most of a morning to work out what I had done.",
+        "start_ts": 81.26,
+        "end_ts": 92.7
+      },
+      {
+        "turn_id": "q5",
+        "speaker": "agent",
+        "role": "question",
+        "text": "How large was the team?",
+        "question_bucket": "factual",
+        "start_ts": 93.6,
+        "end_ts": 97.64
+      },
+      {
+        "turn_id": "a5",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "Seven engineers and a product manager when I joined, eleven by the time I left.",
+        "start_ts": 105.74,
+        "end_ts": 112.9
+      },
+      {
+        "turn_id": "q6",
+        "speaker": "agent",
+        "role": "question",
+        "text": "Describe a time you had to learn something quickly.",
+        "question_bucket": "experiential",
+        "start_ts": 113.8,
+        "end_ts": 119.09
+      },
+      {
+        "turn_id": "a6",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "We inherited a Kafka setup nobody understood. I spent a week reading the consumer code and writing down how it actually behaved rather than how it was documented.",
+        "start_ts": 126.79,
+        "end_ts": 137.27
+      },
+      {
+        "turn_id": "q7",
+        "speaker": "agent",
+        "role": "question",
+        "text": "What does a good engineering culture look like to you?",
+        "question_bucket": "open_ended",
+        "start_ts": 138.17,
+        "end_ts": 143.6
+      },
+      {
+        "turn_id": "a7",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "One where people say the thing that is going wrong early. Most of the bad outcomes I have seen came from someone knowing and not saying.",
+        "start_ts": 152.5,
+        "end_ts": 161.94
+      },
+      {
+        "turn_id": "q8",
+        "speaker": "agent",
+        "role": "question",
+        "text": "Were you on call?",
+        "question_bucket": "factual",
+        "start_ts": 162.84,
+        "end_ts": 166.61
+      },
+      {
+        "turn_id": "a8",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "Yes, one week in five.",
+        "start_ts": 173.51,
+        "end_ts": 178.39
+      },
+      {
+        "turn_id": "q9",
+        "speaker": "agent",
+        "role": "question",
+        "text": "Tell me about a time you disagreed with a decision from above.",
+        "question_bucket": "experiential",
+        "start_ts": 179.29,
+        "end_ts": 185.08
+      },
+      {
+        "turn_id": "a9",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "We were told to ship a feature without the audit logging. I wrote down what I thought the risk was, we shipped anyway, and I added it two sprints later.",
+        "start_ts": 193.38,
+        "end_ts": 203.46
+      },
+      {
+        "turn_id": "q10",
+        "speaker": "agent",
+        "role": "question",
+        "text": "Where do you want to be in a few years?",
+        "question_bucket": "open_ended",
+        "start_ts": 204.36,
+        "end_ts": 209.11
+      },
+      {
+        "turn_id": "a10",
+        "speaker": "candidate",
+        "role": "answer",
+        "text": "Leading a small team, but still writing code. I do not want to stop being useful in a review.",
+        "start_ts": 216.61,
+        "end_ts": 224.33
+      }
+    ]
+  }
+}
